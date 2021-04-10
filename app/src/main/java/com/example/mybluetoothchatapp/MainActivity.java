@@ -13,7 +13,18 @@ import android.widget.Toast;
 import static android.bluetooth.BluetoothAdapter.getDefaultAdapter;
 
 public class MainActivity extends AppCompatActivity {
+    //Well here we made two button for turning Bluetooth On and Off
+    //We first declare two objects/varaible of Button.
     Button buttonOn,buttonoff;
+//     Here we declare an object of BluetoothAdapter
+//     Let's see what is an Bluetooth Adapter ?
+//     The bluetooth adapter let's you perfome Fundamental Bluetooth Tasks
+//     such as initiate device discovery, query a list of bonded (paired) devices,
+//     instantiate a BluetoothDevice using a known MAC address, 
+//     and create a BluetoothServerSocket to listen for connection requests from other devices
+//     Adapter is a bridge between UI component and data source that helps us to fill data in UI component. 
+//     It holds the data and send the data to an Adapter view then view can takes the data from the adapter view 
+//     and shows the data on different views like as ListView, GridView, Spinner etc
     BluetoothAdapter mybluetoothAdapter;
     Intent btEnablingIntent;
     int requestCodeForEnable;
@@ -28,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         bluetoothOnMethod();
         bluetoothOffMethod();
     }
-
+// if user click on on the off button bluetooth will be turned off 
     private void bluetoothOffMethod() {
         buttonoff.setOnClickListener(new View.OnClickListener() {
             @Override
